@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Configure Veracode
+jobs:
+  build:
+    name: Configure Veracode
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Configure Veracode
+        uses: sebcoles/action-declare-configure@v1
+        env:
+          VERACODE_API_KEY_ID: ${{ secrets.VERACODE_API_KEY_ID }}
+          VERACODE_API_KEY_SECRET: ${{ secrets.VERACODE_API_KEY_SECRET }} 
+        with:
+          configuration-file: "veracode.json"
