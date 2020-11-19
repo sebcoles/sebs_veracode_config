@@ -51,7 +51,20 @@
           "sandbox_name": "Release Candidate"
         }
       ],
-      "mitigations": []
+      "mitigations": [
+        {
+          "flaw_id": "25",
+          "cwe_id": "404",
+          "file_name": "UserController.java",
+          "line_number": "495",
+          "link": "https://github.com/sebcoles/Veracode.OSS.Wrapper/blob/main/Veracode.OSS.Wrapper/VeracodeEnvHelper.cs",
+          "action": "appdesign",
+          "technique": "__ENTER_TECHNIQUES__",
+          "specifics": "__ENTER_SPECIFICS__",
+          "remaining_risk": "__ENTER_REMAINING_RISK__",
+          "verification": "__ENTER_VERIFICATION__"
+        }
+      ]
     },
     {
       "policy_schedule": "0 0 * * *",
